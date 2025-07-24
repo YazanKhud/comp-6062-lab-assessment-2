@@ -16,8 +16,9 @@
             </header>
             <main>
                 <p>Current Gas Level:</p>
-                <input type="number" min="0" max="100" v-model= "gasLevelValue">
+
                 <input type="range" min="0" max="100" v-model = "gasLevelValue">
+                <input type="number" min="0" max="100" v-model= "gasLevelValue">
                 <div v-for="gasLevel in gasLevels" :key="gasLevel.id"
                 :class="['gasLevelIndicator', gasLevel.color, {
                 'unactiveGasStatus': !activeGasLevel(gasLevel) }]">{{
